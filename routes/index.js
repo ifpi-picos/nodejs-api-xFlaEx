@@ -1,5 +1,5 @@
 const express = require('express');
-const postRoutes = require('./postagem-routes');
+const postRoutes = require('./postagemRoutes');
 
 const router = express.Router();
 
