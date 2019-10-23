@@ -12,6 +12,18 @@ class Postagens {
         const postagens = await timingSafeEqual.Postagem.find({});
         return postagens;
     }
+
+    async alterarPorId(id, postagemDTO){
+        await this.Postagem.updateOne({_id: id}, postagemDTO);
+    }
+
+    async consultarPorId(id){
+        const postagtem = await this.Postagem.findById(id);
+        return postagem;
+    }
+    async DeletarPorId(id){
+        const postagem = await this.Postagem.deleteOne({_id: id});
+    }
 }
 
 module.exports = Postagens;

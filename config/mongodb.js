@@ -1,4 +1,4 @@
-const moongose = require('moongose');
+const moongose = require('mongoose');
 
 function conectaMongoDB(){
     moongose.connect(
@@ -8,9 +8,9 @@ function conectaMongoDB(){
 
     const db = moongose.connection;
 
-    db.on('error', console.error.bind(console, 'connection error:'));
+    db.on('error', () =>  console.error.bind(console, 'connection error:'));
 
-    db.on('open', console.info('MongoDB conectado com sucesso!'));
+    db.on('open', () => console.info('MongoDB conectado com sucesso!'));
 }
 
 module.exports = conectaMongoDB;
