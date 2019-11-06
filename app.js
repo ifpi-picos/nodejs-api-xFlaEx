@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require ('body-parser');
 const routers = require('./routes');
 const conectaMongoDB = require('./config/mongodb');
+const cors = require('cors');
 
 const app = express();
 app.use(bodyParser.json());

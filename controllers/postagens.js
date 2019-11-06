@@ -9,7 +9,7 @@ class Postagens {
         return 'Adicionado com sucesso!';
     }
     async consultarTodos (){
-        const postagens = await timingSafeEqual.Postagem.find({});
+        const postagens = await timingSafeEqual.Postagem.find({}, null);
         return postagens;
     }
 
